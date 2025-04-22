@@ -26,8 +26,10 @@ public static class TEngineSettingsProvider
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("AssemblyTextAssetExtension"));  
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("AssemblyTextAssetPath"));  
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("UpdateStyle"));  
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("ResDownLoadPath"));  
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("FallbackResDownLoadPath"));  
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("PassportUrl"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("LocalAppVersion"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("Servertype"));
+  
                 serializedObject.ApplyModifiedProperties();  
             },  
             keywords = new[] { "TEngine", "Settings", "Custom" }  

@@ -19,6 +19,8 @@ MonoBehaviour:
   - Procedure.ProcedureDownloadOver
   - Procedure.ProcedureInitPackage
   - Procedure.ProcedureInitResources
+  - Procedure.ProcedureInitResVersionInfo
+  - Procedure.ProcedureInitServerInfo
   - Procedure.ProcedureLaunch
   - Procedure.ProcedureLoadAssembly
   - Procedure.ProcedurePreload

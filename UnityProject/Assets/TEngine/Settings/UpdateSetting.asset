@@ -28,5 +28,6 @@ MonoBehaviour:
   AssemblyTextAssetPath: AssetRaw/DLL
   UpdateStyle: 1
   UpdateNotice: 1
-  ResDownLoadPath: http://127.0.0.1:8081
-  FallbackResDownLoadPath: http://127.0.0.1:8082
+  Servertype: 1
+  PassportUrl: http://127.0.0.1
+  LocalAppVersion: 60

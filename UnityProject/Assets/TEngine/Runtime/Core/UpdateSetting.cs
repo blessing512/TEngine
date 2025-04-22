@@ -37,6 +37,15 @@ namespace TEngine
         NoNotice = 2,
     }
 
+
+    public enum ServerType
+    {
+        Online = 1,
+        Test = 2,
+        Review = 3,
+    }
+
+
     [CreateAssetMenu(menuName = "TEngine/UpdateSetting", fileName = "UpdateSetting")]
     public class UpdateSetting : ScriptableObject
     {
@@ -84,33 +93,111 @@ namespace TEngine
 
         public UpdateNotice UpdateNotice = UpdateNotice.Notice;
 
-        /// <summary>
-        /// 资源服务器地址。
-        /// </summary>
         [SerializeField]
-        private string ResDownLoadPath = "http://127.0.0.1:8081";
+        /// <summary>
+        /// 服务器类型，正式服，先行服，审核服
+        /// </summary>
+        public ServerType Servertype = ServerType.Online;
 
         /// <summary>
-        /// 资源服务备用地址。
+        /// 服务器的基础地址
+        /// 会根据Servertype,LocalAppVersion,还有PlatformName，deviceId,等参数
+        /// 获取真正的服务器地址方便同一个客户端切换连接不同的服务器
         /// </summary>
         [SerializeField]
-        private string FallbackResDownLoadPath = "http://127.0.0.1:8082";
+        public string PassportUrl = "1";
+
+
+        /// <summary>
+        /// 连接服务器的真正地址
+        /// </summary>
+        public string ServerUrl
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 游戏强更下载地址
+        /// </summary>
+        public string GameDownloadUrl
+        {
+            get;
+            set;
+        }
+
+        
+        /// <summary>
+        /// 本地客户端版本号。
+        /// </summary>
+        [SerializeField]
+        public int LocalAppVersion = 1;
+
+        /// <summary>
+        /// 服务器客户端版本号。
+        /// </summary>
+        public string ServerAppVersion
+        {
+            get;
+            set;
+        }
+
+
+        /// <summary>
+        /// 服务器资源版本号
+        /// </summary>
+        public string ServerResVersion
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 服务器更新地址
+        /// </summary>
+        public string ResDownLoadPath
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 服务器资源目录
+        /// </summary>
+        public string ServerResFloder
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// 是否是白名单
+        /// </summary>
+        public bool IsWhitelist
+        {
+            get;
+            set;
+        }
+
+
+      
 
         /// <summary>
         /// 获取资源下载路径。
         /// </summary>
         public string GetResDownLoadPath()
         {
-            return Path.Combine(ResDownLoadPath, projectName, GetPlatformName()).Replace("\\", "/");
+            return Path.Combine(ResDownLoadPath, projectName, GetPlatformName(),ServerResFloder).Replace("\\", "/");
         }
 
-        /// <summary>
-        /// 获取备用资源下载路径。
-        /// </summary>
         public string GetFallbackResDownLoadPath()
         {
-            return Path.Combine(FallbackResDownLoadPath, projectName, GetPlatformName()).Replace("\\", "/");
+            return Path.Combine(ResDownLoadPath, projectName, GetPlatformName(), ServerResFloder).Replace("\\", "/");
         }
+
+
+  
+
 
         /// <summary>
         /// 获取当前的平台名称。
