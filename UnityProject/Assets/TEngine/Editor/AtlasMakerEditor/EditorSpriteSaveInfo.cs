@@ -90,7 +90,7 @@
         {
             var currentPath = Path.GetDirectoryName(assetPath);
             var rootPath = Config.sourceAtlasRoot.Replace("\\", "/").TrimEnd('/');
-
+            currentPath = currentPath.Replace("\\", "/");
             while (currentPath != null && currentPath.StartsWith(rootPath))
             {
                 var parentAtlasName = GetAtlasNameForDirectory(currentPath);
@@ -202,11 +202,15 @@
 
         private static List<Sprite> LoadValidSprites(string atlasName)
         {
-            return _atlasMap[atlasName]
-                .Where(File.Exists)
-                .Select(p => AssetDatabase.LoadAssetAtPath<Sprite>(p))
-                .Where(s => s != null)
-                .ToList();
+            if (_atlasMap.TryGetValue(atlasName, out List<string> spriteList))
+            {
+                return spriteList
+                    .Where(File.Exists)
+                    .Select(AssetDatabase.LoadAssetAtPath<Sprite>)
+                    .Where(s => s)
+                    .ToList();
+            }
+            return new List<Sprite>();
         }
 
 
