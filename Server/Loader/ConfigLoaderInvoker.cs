@@ -21,11 +21,11 @@ namespace ET
                 string configFilePath;
                 if (startConfigs.Contains(configType.Name))
                 {
-                    configFilePath = $"../Config/Generate/{Options.Instance.StartConfig}/{configType.Name}.bytes";
+                    configFilePath = $"../Configs/Generate/{Options.Instance.StartConfig}/{configType.Name}.bytes";
                 }
                 else
                 {
-                    configFilePath = $"../Config/Generate/{configType.Name}.bytes";
+                    configFilePath = $"../Configs/Generate/{configType.Name}.bytes";
                 }
 
                 output[configType] = new ByteBuf(File.ReadAllBytes(configFilePath));
@@ -41,7 +41,7 @@ namespace ET
     {
         public override ByteBuf Handle(ConfigLoader.GetOneConfigBytes args)
         {
-            return new ByteBuf(File.ReadAllBytes($"../Config/Generate/{args.ConfigName}.bytes"));
+            return new ByteBuf(File.ReadAllBytes($"../Configs/Generate/{args.ConfigName}.bytes"));
         }
     }
 }

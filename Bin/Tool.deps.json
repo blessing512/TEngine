@@ -421,10 +421,7 @@
           "ThirdParty": "1.0.0"
         },
         "runtime": {
-          "Core.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Core.dll": {}
         }
       },
       "ThirdParty/1.0.0": {
@@ -439,10 +436,7 @@
           "SharpZipLib": "1.3.3"
         },
         "runtime": {
-          "ThirdParty.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ThirdParty.dll": {}
         }
       }
     }
