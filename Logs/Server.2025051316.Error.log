@@ -1,0 +1,18 @@
+2025-05-13 16:48:19.6149 (FiberManager.cs:83) init fiber fail: LiveOps System.Exception: Invoke error5: 1048576 ET.FiberInit
+   at ET.EventSystem.Invoke[A,T](Int64 type, A args) in D:\OpenSource\TEngine\Server\Core\Core\World\Module\EventSystem\EventSystem.cs:line 183
+   at ET.FiberManager.<>c__DisplayClass8_1.<<Create>b__0>d.MoveNext() in D:\OpenSource\TEngine\Server\Core\Core\World\Module\Fiber\FiberManager.cs:line 83
+2025-05-13 16:51:17.8388 (FiberManager.cs:83) init fiber fail: LiveOps System.Exception: Invoke error5: 1048576 ET.FiberInit
+   at ET.EventSystem.Invoke[A,T](Int64 type, A args) in D:\OpenSource\TEngine\Server\Core\Core\World\Module\EventSystem\EventSystem.cs:line 183
+   at ET.FiberManager.<>c__DisplayClass8_1.<<Create>b__0>d.MoveNext() in D:\OpenSource\TEngine\Server\Core\Core\World\Module\Fiber\FiberManager.cs:line 83
+2025-05-13 16:52:11.8742 (FiberManager.cs:83) init fiber fail: LiveOps System.Exception: Invoke error5: 1048576 ET.FiberInit
+   at ET.EventSystem.Invoke[A,T](Int64 type, A args) in D:\OpenSource\TEngine\Server\Core\Core\World\Module\EventSystem\EventSystem.cs:line 183
+   at ET.FiberManager.<>c__DisplayClass8_1.<<Create>b__0>d.MoveNext() in D:\OpenSource\TEngine\Server\Core\Core\World\Module\Fiber\FiberManager.cs:line 83
+2025-05-13 16:57:41.4139 (FiberManager.cs:83) init fiber fail: LiveOps System.Exception: Invoke error5: 1048576 ET.FiberInit
+   at ET.EventSystem.Invoke[A,T](Int64 type, A args) in D:\OpenSource\TEngine\Server\Core\Core\World\Module\EventSystem\EventSystem.cs:line 183
+   at ET.FiberManager.<>c__DisplayClass8_1.<<Create>b__0>d.MoveNext() in D:\OpenSource\TEngine\Server\Core\Core\World\Module\Fiber\FiberManager.cs:line 83
+2025-05-13 16:58:25.5709 (FiberManager.cs:83) init fiber fail: LiveOps System.Exception: Invoke error5: 1048576 ET.FiberInit
+   at ET.EventSystem.Invoke[A,T](Int64 type, A args) in D:\OpenSource\TEngine\Server\Core\Core\World\Module\EventSystem\EventSystem.cs:line 183
+   at ET.FiberManager.<>c__DisplayClass8_1.<<Create>b__0>d.MoveNext() in D:\OpenSource\TEngine\Server\Core\Core\World\Module\Fiber\FiberManager.cs:line 83
+2025-05-13 16:59:28.8631 (FiberManager.cs:83) init fiber fail: None System.Exception: Invoke error5: 0 ET.FiberInit
+   at ET.EventSystem.Invoke[A,T](Int64 type, A args) in D:\OpenSource\TEngine\Server\Core\Core\World\Module\EventSystem\EventSystem.cs:line 183
+   at ET.FiberManager.<>c__DisplayClass8_1.<<Create>b__0>d.MoveNext() in D:\OpenSource\TEngine\Server\Core\Core\World\Module\Fiber\FiberManager.cs:line 83

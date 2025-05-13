@@ -15,8 +15,8 @@ namespace ET
 		Map = 1 << 7,
 		Router = 1 << 8,
 		RouterManager = 1 << 9,
-		Robot = 1 << 10,
-		BenchmarkClient = 1 << 11,
+        LiveOps = 1 << 10,//游戏运营后台管理
+        BenchmarkClient = 1 << 11,
 		BenchmarkServer = 1 << 12,
 		Match = 1 << 14,
 		Room = 1 << 15,
@@ -24,9 +24,11 @@ namespace ET
 		LockStepServer = 1 << 17,
 		RoomRoot = 1 << 18,
 		Watcher = 1 << 19,
+        Robot = 1 << 20,
 
-		// 客户端
-		Demo = 1 << 30,
+
+        // 客户端
+        Demo = 1 << 30,
 		Current = 1L << 31,
 		LockStep = 1L << 32,
 		LockStepView = 1L << 33,

@@ -19,3 +19,17 @@ message NetClient2Main_Login // IResponse
 
 	int64 PlayerId = 4;
 }
+
+message HttpGetPassportResponse // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+
+
+	int32 code = 4;
+    string authUrl = 5;
+    string iapUrl = 6;
+    int32 isReview = 7;
+}
+

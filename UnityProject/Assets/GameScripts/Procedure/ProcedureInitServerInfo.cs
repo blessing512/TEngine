@@ -14,7 +14,7 @@ namespace Procedure
         public int code = 0;
         public string authUrl;
         public string iapUrl;
-        public bool isReview = false;
+        public int isReview = 0;
     }
 
 
@@ -66,7 +66,7 @@ namespace Procedure
         }
         private async UniTaskVoid GetServerUrl()
         {
-            var url = string.Format("{0}?plat={1}&ver={2}&channelId={3}",
+            var url = string.Format("{0}:30005/get_passport?plat={1}&ver={2}&channelId={3}",
             Settings.UpdateSetting.PassportUrl,
             Settings.UpdateSetting.Servertype,
             Settings.UpdateSetting.LocalAppVersion,
@@ -104,7 +104,7 @@ namespace Procedure
         protected void OnGetServerUrlSccuess(GamePassportData urlData)
         {
 
-            Settings.UpdateSetting.IsWhitelist = Convert.ToBoolean(urlData.isReview);
+            Settings.UpdateSetting.IsReview = urlData.isReview == 1;
             Settings.UpdateSetting.ServerUrl = urlData.authUrl;
 
             ChangeState<ProcedureInitResVersionInfo>(_procedureOwner);

@@ -84,9 +84,59 @@ namespace ET
         }
     }
 
+    [MemoryPackable]
+    [Message(ClientMessage.HttpGetPassportResponse)]
+    public partial class HttpGetPassportResponse : MessageObject, IResponse
+    {
+        public static HttpGetPassportResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Instance.Fetch(typeof(HttpGetPassportResponse), isFromPool) as HttpGetPassportResponse;
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        [MemoryPackOrder(3)]
+        public int code { get; set; }
+
+        [MemoryPackOrder(4)]
+        public string authUrl { get; set; }
+
+        [MemoryPackOrder(5)]
+        public string iapUrl { get; set; }
+
+        [MemoryPackOrder(6)]
+        public int isReview { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+            this.code = default;
+            this.authUrl = default;
+            this.iapUrl = default;
+            this.isReview = default;
+
+            ObjectPool.Instance.Recycle(this);
+        }
+    }
+
     public static class ClientMessage
     {
         public const ushort Main2NetClient_Login = 1001;
         public const ushort NetClient2Main_Login = 1002;
+        public const ushort HttpGetPassportResponse = 1003;
     }
 }

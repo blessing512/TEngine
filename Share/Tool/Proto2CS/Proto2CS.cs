@@ -23,8 +23,8 @@ namespace ET
 
     public static partial class InnerProto2CS
     {
-        private static string protoDir = "../Config/Proto";
-        private static string clientMessagePath = "../Unity/Assets/GameScripts/GameProto/Generate/Message/";
+        private static string protoDir = "../Configs/Proto";
+        private static string clientMessagePath = "../UnityProject/Assets/GameScripts/HotFix/GameProto/Generate/Message/";
         private static string serverMessagePath = "../Server/Model/Generate/Message/";
         // private const string clientServerMessagePath = "../Unity/Assets/Scripts/Model/Generate/ClientServer/Message/";
         private static readonly char[] splitChars = [' ', '\t'];

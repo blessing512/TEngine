@@ -179,8 +179,16 @@ namespace TEngine
             set;
         }
 
+        /// <summary>
+        /// 是否是白名单
+        /// </summary>
+        public bool IsReview
+        {
+            get;
+            set;
+        }
 
-      
+
 
         /// <summary>
         /// 获取资源下载路径。

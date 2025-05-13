@@ -1,0 +1,68 @@
+2025-05-13 15:29:36.7041 (Init.cs:35) server start........................ 
+2025-05-13 15:29:36.7272 (Init.cs:70) System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\OpenSource\TEngine\Config\Proto'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+   at ET.FileHelper.GetAllFiles(List`1 files, String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 18
+   at ET.FileHelper.GetAllFiles(String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 12
+   at ET.InnerProto2CS.Proto2CS(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 56
+   at ET.Proto2CS.Export(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 19
+   at ET.Server.Init.Main(String[] args) in F:\Work\StickGame\TEngine\Share\Tool\Init.cs:line 70
+2025-05-13 15:38:29.6146 (Init.cs:35) server start........................ 
+2025-05-13 15:38:29.6236 (Init.cs:70) System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\OpenSource\TEngine\Config\Proto'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+   at ET.FileHelper.GetAllFiles(List`1 files, String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 18
+   at ET.FileHelper.GetAllFiles(String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 12
+   at ET.InnerProto2CS.Proto2CS(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 56
+   at ET.Proto2CS.Export(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 19
+   at ET.Server.Init.Main(String[] args) in F:\Work\StickGame\TEngine\Share\Tool\Init.cs:line 70
+2025-05-13 15:41:59.1957 (Init.cs:35) server start........................ 
+2025-05-13 15:41:59.2043 (Init.cs:70) System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\OpenSource\TEngine\Config\Proto'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+   at ET.FileHelper.GetAllFiles(List`1 files, String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 18
+   at ET.FileHelper.GetAllFiles(String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 12
+   at ET.InnerProto2CS.Proto2CS(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 56
+   at ET.Proto2CS.Export(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 19
+   at ET.Server.Init.Main(String[] args) in F:\Work\StickGame\TEngine\Share\Tool\Init.cs:line 70
+2025-05-13 15:44:13.8186 (Init.cs:35) server start........................ 
+2025-05-13 15:44:13.8308 (Init.cs:70) System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\OpenSource\TEngine\Config\Proto'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+   at ET.FileHelper.GetAllFiles(List`1 files, String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 18
+   at ET.FileHelper.GetAllFiles(String dir, String searchPattern) in F:\Work\StickGame\TEngine\Share\Tool\FileHelper.cs:line 12
+   at ET.InnerProto2CS.Proto2CS(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 56
+   at ET.Proto2CS.Export(String protoDirPath, String clientPath, String serverPath) in F:\Work\StickGame\TEngine\Share\Tool\Proto2CS\Proto2CS.cs:line 19
+   at ET.Server.Init.Main(String[] args) in F:\Work\StickGame\TEngine\Share\Tool\Init.cs:line 70
+2025-05-13 15:46:32.3064 (Init.cs:35) server start........................ 
+2025-05-13 15:46:32.3517 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:48:26.2257 (Init.cs:35) server start........................ 
+2025-05-13 15:48:26.2463 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:48:51.4102 (Init.cs:35) server start........................ 
+2025-05-13 15:48:51.4287 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:49:45.4262 (Init.cs:35) server start........................ 
+2025-05-13 15:49:45.4450 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:53:35.0217 (Init.cs:35) server start........................ 
+2025-05-13 15:53:35.0471 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:55:39.0780 (Init.cs:35) server start........................ 
+2025-05-13 15:55:39.0969 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:57:06.5814 (Init.cs:35) server start........................ 
+2025-05-13 15:57:06.6103 (Proto2CS.cs:20) proto2cs succeed!
+2025-05-13 15:58:52.6394 (Init.cs:35) server start........................ 
+2025-05-13 15:58:52.6647 (Proto2CS.cs:20) proto2cs succeed!
