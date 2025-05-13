@@ -154,3 +154,6 @@
 2025-05-13 17:20:25.0154 (FiberInit_Router.cs:15) Router create: 304
 2025-05-13 17:22:21.2329 (HttpDispatcher.cs:49) Http had no path /gameUpdate
 2025-05-13 17:22:42.0462 (HttpDispatcher.cs:49) Http had no path /favicon.ico
+2025-05-13 17:23:39.3793 (HttpDispatcher.cs:49) Http had no path /gameUpdate
+2025-05-13 17:32:18.4177 (Init.cs:35) server start........................ 
+2025-05-13 17:32:18.4507 (Proto2CS.cs:20) proto2cs succeed!

@@ -133,10 +133,83 @@ namespace ET
         }
     }
 
+    [MemoryPackable]
+    [Message(ClientMessage.HttpGetGameUpdateResponse)]
+    public partial class HttpGetGameUpdateResponse : MessageObject, IResponse
+    {
+        public static HttpGetGameUpdateResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Instance.Fetch(typeof(HttpGetGameUpdateResponse), isFromPool) as HttpGetGameUpdateResponse;
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        [MemoryPackOrder(3)]
+        public int isGM { get; set; }
+
+        /// <summary>
+        /// 游戏更新地址
+        /// </summary>
+        [MemoryPackOrder(4)]
+        public string gameDownloadUrl { get; set; }
+
+        /// <summary>
+        /// 资源目录
+        /// </summary>
+        [MemoryPackOrder(5)]
+        public string resFloder { get; set; }
+
+        /// <summary>
+        /// 强更版本
+        /// </summary>
+        [MemoryPackOrder(6)]
+        public string ServerAppVersion { get; set; }
+
+        /// <summary>
+        /// 资源版本号
+        /// </summary>
+        [MemoryPackOrder(7)]
+        public string resVersion { get; set; }
+
+        /// <summary>
+        /// 资源更新地址
+        /// </summary>
+        [MemoryPackOrder(8)]
+        public string resUrl { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+            this.isGM = default;
+            this.gameDownloadUrl = default;
+            this.resFloder = default;
+            this.ServerAppVersion = default;
+            this.resVersion = default;
+            this.resUrl = default;
+
+            ObjectPool.Instance.Recycle(this);
+        }
+    }
+
     public static class ClientMessage
     {
         public const ushort Main2NetClient_Login = 1001;
         public const ushort NetClient2Main_Login = 1002;
         public const ushort HttpGetPassportResponse = 1003;
+        public const ushort HttpGetGameUpdateResponse = 1004;
     }
 }

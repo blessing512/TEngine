@@ -15,33 +15,16 @@ using UnityEngine;
 namespace Procedure
 {
 
-    public class GameResVerInfo
+    public class GameUpdateData
     {
+
+        public bool isGM = false;               // 是否白名单
         public string gameDownloadUrl;     // 游戏更新地址
         public string resFloder;         // 资源目录
         public string ServerAppVersion;    // 强更版本
         public string resVersion;          //资源版本号
         public string resUrl;              //资源更新地址
-    }
 
-    public class GameUpdateData
-    {
-
-        public bool isGM = false;               // 是否白名单
-        public GameResVerInfo resInfo;
-        public GameResVerInfo gmResInfo;
-
-        public GameResVerInfo GetResVerInfo()
-        {
-            if (isGM)
-            {
-                return gmResInfo;
-            }
-            else
-            {
-                return resInfo;
-            }
-        }
     }
 
 
@@ -94,7 +77,7 @@ namespace Procedure
         protected async UniTaskVoid InitResVersionInfo()
         {
 
-            string strInterFace = "gameUpdate";
+            string strInterFace = "get_game_update";
             Dictionary<string, string> dicParams = new Dictionary<string, string>();
             dicParams.Add("channelId", UpdateSetting.GetPlatformName());
             dicParams.Add("ver", Settings.UpdateSetting.LocalAppVersion.ToString());
@@ -115,24 +98,15 @@ namespace Procedure
             {
                 var gameUpdateData = JsonConvert.DeserializeObject<GameUpdateData>(result);
 
-                GameResVerInfo gameResVerInfo;
-                if(gameUpdateData.isGM)
-                {
-                    gameResVerInfo = gameUpdateData.gmResInfo;
-        
-                }
-                else
-                {
-                    gameResVerInfo = gameUpdateData.resInfo;
-                }
+       
 
-                Settings.UpdateSetting.GameDownloadUrl = gameResVerInfo.gameDownloadUrl;
-                Settings.UpdateSetting.ResDownLoadPath = gameResVerInfo.resUrl;
-                Settings.UpdateSetting.ServerResFloder = gameResVerInfo.resFloder;
-                Settings.UpdateSetting.ServerAppVersion = gameResVerInfo.ServerAppVersion;
+                Settings.UpdateSetting.GameDownloadUrl = gameUpdateData.gameDownloadUrl;
+                Settings.UpdateSetting.ResDownLoadPath = gameUpdateData.resUrl;
+                Settings.UpdateSetting.ServerResFloder = gameUpdateData.resFloder;
+                Settings.UpdateSetting.ServerAppVersion = gameUpdateData.ServerAppVersion;
 
 
-                if (Convert.ToInt32(gameResVerInfo.ServerAppVersion) > Settings.UpdateSetting.LocalAppVersion)
+                if (Convert.ToInt32(gameUpdateData.ServerAppVersion) > Settings.UpdateSetting.LocalAppVersion)
                 {
                     LauncherMgr.ShowMessageBox($"客户端版本过低，请前往应用商店下载最新版本",
                         MessageShowType.TwoButton,
