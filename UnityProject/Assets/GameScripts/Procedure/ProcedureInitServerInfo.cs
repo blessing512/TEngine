@@ -66,7 +66,7 @@ namespace Procedure
         }
         private async UniTaskVoid GetServerUrl()
         {
-            var url = string.Format("{0}:30005/get_passport?plat={1}&ver={2}&channelId={3}",
+            var url = string.Format("{0}:30005/get_passport?serverType={1}&appVer={2}&platName={3}",
             Settings.UpdateSetting.PassportUrl,
             Settings.UpdateSetting.Servertype,
             Settings.UpdateSetting.LocalAppVersion,

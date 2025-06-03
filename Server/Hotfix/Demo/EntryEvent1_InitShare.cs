@@ -1,3 +1,5 @@
+using ET.Server;
+
 namespace ET
 {
     [Event(SceneType.Main)]
@@ -10,7 +12,8 @@ namespace ET
             root.AddComponent<ObjectWait>();
             root.AddComponent<MailBoxComponent, MailBoxType>(MailBoxType.UnOrderedMessage);
             root.AddComponent<ProcessInnerSender>();
-            
+            root.AddComponent<DBManagerComponent>();
+
             await ETTask.CompletedTask;
         }
     }
