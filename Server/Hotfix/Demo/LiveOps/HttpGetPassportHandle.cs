@@ -19,8 +19,8 @@ namespace ET.Server
                 return;
             }
 
-
-            var passPorts = await scene.GetComponent<DBManagerComponent>().GetZoneDB(ZoneType.LiveOps).Query<GamePassport>(e => e.PlatName == data["platName"] && e.ServerType == Convert.ToInt32(data["serverType"]));
+            var zone = scene.GetComponent<DBManagerComponent>().GetZoneDB(ZoneType.LiveOps);
+            var passPorts = await zone.Query<GamePassport>(e => e.PlatName == data["platName"] && e.ServerType == Convert.ToInt32(data["serverType"]));
           
             if(passPorts != null && passPorts.Count > 0)
             {
