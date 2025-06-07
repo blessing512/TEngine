@@ -68,7 +68,7 @@ namespace Procedure
         {
             var url = string.Format("{0}:30005/get_passport?serverType={1}&appVer={2}&platName={3}",
             Settings.UpdateSetting.PassportUrl,
-            Settings.UpdateSetting.Servertype,
+            (int)Settings.UpdateSetting.Servertype,
             Settings.UpdateSetting.LocalAppVersion,
             UpdateSetting.GetPlatformName());
 

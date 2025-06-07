@@ -3,85 +3,50 @@
 namespace ET
 {
 
-    public partial class GamePassport : Entity, IAwake
+    public  class GamePassport : Entity, IAwake
     {
 
-        [BsonElement]
-        private string authUrl;
 
         [BsonElement]
-        private string iapUrl;
-
-        [BsonElement]
-        private string appVer;
-
-        [BsonElement]
-        private string platName;
-
-        [BsonElement]
-        private int isReview;
-
-        [BsonElement]
-        private int serverType;
-
-        [BsonIgnore]
         public string AuthUrl
         {
-            get => this.authUrl;
-            set
-            {
-                this.authUrl = value;
-            }
+            get;
+            set;
         }
 
-        [BsonIgnore]
+        [BsonElement]
         public string IapUrl
         {
-            get => this.iapUrl;
-            set
-            {
-                this.iapUrl = value;
-            }
+            get;
+            set;
         }
 
-        [BsonIgnore]
+        [BsonElement]
         public string AppVer
         {
-            get => this.appVer;
-            set
-            {
-                this.appVer = value;
-            }
+            get;
+            set;
         }
 
-        [BsonIgnore]
+        [BsonElement]
         public string PlatName
         {
-            get => this.platName;
-            set
-            {
-                this.platName = value;
-            }
+            get;
+            set;
         }
 
-        [BsonIgnore]
+        [BsonElement]
         public int IsReview
         {
-            get => this.isReview;
-            set
-            {
-                this.isReview = value;
-            }
+            get;
+            set;
         }
 
-        [BsonIgnore]
+        [BsonElement]
         public int ServerType
         {
-            get => this.serverType;
-            set
-            {
-                this.serverType = value;
-            }
+            get;
+            set;
         }
 
 

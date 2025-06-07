@@ -12,6 +12,12 @@ namespace ET.Server
             StartSceneConfig startSceneConfig = StartSceneConfigCategory.Instance.Get((int)root.Id);
             root.AddComponent<HttpComponent, string>($"http://*:{startSceneConfig.Port}/");
             root.AddComponent<DBManagerComponent>();
+
+            root.AddComponent<CoroutineLockComponent>();
+            root.AddComponent<TimerComponent>();
+            root.AddComponent<ObjectWait>();
+            root.AddComponent<MailBoxComponent, MailBoxType>(MailBoxType.UnOrderedMessage);
+            root.AddComponent<ProcessInnerSender>();
             await ETTask.CompletedTask;
         }
     }

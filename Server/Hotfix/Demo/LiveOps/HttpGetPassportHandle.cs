@@ -20,13 +20,18 @@ namespace ET.Server
             }
 
             var zone = scene.GetComponent<DBManagerComponent>().GetZoneDB(ZoneType.LiveOps);
-            var passPorts = await zone.Query<GamePassport>(e => e.PlatName == data["platName"] && e.ServerType == Convert.ToInt32(data["serverType"]));
-          
-            if(passPorts != null && passPorts.Count > 0)
+            var coroutineLockComponent = scene.GetComponent<CoroutineLockComponent>();
+
+
+
+            var passPorts = await zone.Query<GamePassport>(e => e.PlatName == data["platName"] &&  e.ServerType == Convert.ToInt32(data["serverType"]), "GamePassport");
+
+            if (passPorts != null && passPorts.Count > 0)
             {
                 foreach (var passport in passPorts)
                 {
-                    if( passport.AppVer == data["appVer"])
+                    string appVer = data["appVer"];
+                    if( passport.AppVer == appVer)
                     {
                         response.code = 1;
                         response.authUrl = passport.AuthUrl;
